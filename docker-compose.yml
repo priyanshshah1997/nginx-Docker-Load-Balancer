@@ -17,7 +17,7 @@ services:
       - /app/node_modules
     ports:
       - 5001:5000
-  nginx-server:
+  nginxserver:
     build: ./nginxApp
       ports:
         - 5000:80
