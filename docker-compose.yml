@@ -7,10 +7,16 @@ services:
     ports:
       - 5002:5000
     restart: on-failure
+    volumes:
+      - ./nodeApp:/app
+      - /app/node_modules
   nodeApp2:
     build: ./nodeApp
     container_name: 'nodeApp2'
     restart: on-failure
+    volumes:
+      - ./nodeApp:/app
+      - /app/node_modules
     ports:
       - 5001:5000
   nginx-server:
