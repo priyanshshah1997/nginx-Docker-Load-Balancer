@@ -18,7 +18,7 @@ services:
     ports:
       - 5001:5000
   nginxserver:
-    build: ./nginxApp
+      build: ./nginxApp
       ports:
         - 5000:80
       restart: on-failure
