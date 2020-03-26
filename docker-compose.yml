@@ -3,7 +3,6 @@ version: "3.4"
 services:
   nodeApp1:
     build: ./nodeApp
-    container_name: "nodeApp1"
     ports:
       - 5002:5000
     restart: on-failure
@@ -12,7 +11,6 @@ services:
       - /app/node_modules
   nodeApp2:
     build: ./nodeApp
-    container_name: "nodeApp2"
     restart: on-failure
     volumes:
       - ./nodeApp:/app
@@ -21,7 +19,6 @@ services:
       - 5001:5000
   nginx-server:
     build: ./nginxApp
-      container_name: "nginx-server"
       ports:
         - 5000:80
       restart: on-failure
